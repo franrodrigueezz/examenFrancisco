@@ -80,6 +80,9 @@
     <div class="content">
         <h2>Multiplicacion de dos números</h2>
 
+        <h2>Division de dos números</h2>
+ cociente
+
         <form>
             <div class="input-container">
                 <label for="num1">Primer número:</label>
@@ -89,7 +92,11 @@
                 <label for="num2">Segundo número:</label>
                 <input type="text" id="num2">
             </div>
+
             <input type="button" class="botonsuma" value="Calcular multiplicacion"  onclick="calcularSuma()">
+
+            <input type="button" class="botonresta" value="Calcular diviison"  onclick="calcularSuma()">
+ cociente
         </form>
 
         <div id="resultado"></div>
@@ -115,6 +122,26 @@ function calcularSuma() {
     }
 }
 </script>
+
+<script>
+    function calculardivision() {
+        // Obtener los valores de los campos de entrada
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+    
+        // Verificar si ambos valores son números
+        if (!isNaN(num1) && !isNaN(num2)) {
+            // Calcular la suma
+            var suma = num1 / num2;
+    
+            // Mostrar el resultado en el elemento con id "resultado"
+            document.getElementById("resultado").innerHTML = "El resultado de la division es: " + division;
+        } else {
+            // Mostrar un mensaje de error si los valores no son números
+            document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
+        }
+    }
+    </script>
 
 <script>
     function calcularResta() {
